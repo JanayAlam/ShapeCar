@@ -1,0 +1,31 @@
+.buttonPlay{
+    -fx-font-Weight: bold;
+    -fx-background-color: #A82D2D;
+    -fx-background-radius: 3;
+    -fx-font-size: 18;
+    -fx-text-fill: white;
+}
+
+/*
+.buttonPlay:hover{
+    -fx-font-Weight: bold;
+    -fx-background-color: white;
+    -fx-background-radius: 22;
+    -fx-font-size: 20;
+    -fx-text-fill: #596AB3;
+    -fx-border-color: #596AB3;
+    -fx-border-radius: 22;
+    -fx-border-width: 2;
+}
+
+.buttonPlay:pressed{
+    -fx-font-Weight: bold;
+    -fx-background-color: white;
+    -fx-background-radius: 22;
+    -fx-font-size: 20;
+    -fx-text-fill: #596AB3;
+    -fx-border-color: #596AB3;
+    -fx-border-radius: 19;
+    -fx-border-width: 3;
+    -fx-rotate: 5;
+}*/
