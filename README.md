@@ -1,5 +1,5 @@
 # CarShape
-A simple 2D game, develop by JavaFX. [Under development]
+A simple 2D game. [Under development]
 
 College group project.
 
