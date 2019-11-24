@@ -3,10 +3,17 @@ package sample;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -63,41 +70,113 @@ public class Main extends Application {
     }
 
     public void showNewGame() throws Exception{
-        FXMLLoader loader=new FXMLLoader();
-        loader.setLocation(getClass().getResource("newGame.fxml"));
-        Parent root= loader.load();
-        Scene game=new Scene(root, 720, 600);
-        newGameController controller=loader.getController();
-        controller.setMain(this);
+        RoadLens[] l=new RoadLens[9];
+        AnchorPane root=new AnchorPane();
 
-        game.setOnKeyTyped(e -> {
+        //Labels
+        Label labelScoreName=new Label("Score");
+        labelScoreName.setFont(new Font("Arial", 20));
+
+        Label score=new Label("1506");
+        score.setFont(new Font("Arial", 60));
+
+        //Vbox
+        VBox sideNote=new VBox(0);
+        sideNote.setPrefSize(180,600);
+        sideNote.setLayoutX(550);
+        sideNote.setLayoutY(10);
+        sideNote.setPadding(new Insets(10,10,0,10));
+        sideNote.getChildren().addAll(labelScoreName,score);
+
+        //Background Image
+        Image img=new Image("sample\\Road.png");
+        ImageView bg=new ImageView(img);
+
+        //Car Create
+        Car car=new Car();
+        car.setX(215);
+        car.setY(520);
+
+        //Side lines
+        SideLine left=new SideLine();
+        left.setX(1);
+        left.setY(0);
+
+        SideLine right=new SideLine();
+        right.setX(539);
+        right.setY(0);
+
+        //Road Lens
+        for(int i=0;i<l.length;i++){
+            l[i]=new RoadLens();
+        }
+
+        //Set Axis Y
+        l[0].setY(360);
+        l[1].setY(120);
+        l[2].setY(-120);
+        l[3].setY(525);
+        l[4].setY(285);
+        l[5].setY(45);
+        l[6].setY(360);
+        l[7].setY(120);
+        l[8].setY(-120);
+        //Set Axis X
+        l[0].setX(132.5);
+        l[1].setX(132.5);
+        l[2].setX(132.5);
+        l[3].setX(268);
+        l[4].setX(268);
+        l[5].setX(268);
+        l[6].setX(403.5);
+        l[7].setX(403.5);
+        l[8].setX(403.5);
+
+        //AnchodPane settings
+        root.getChildren().addAll(bg,car,left,right, sideNote);
+
+        for(int i=0; i<l.length;i++){
+            root.getChildren().add(l[i]);
+        }
+
+        //Creating Scene
+        Scene scene=new Scene(root, 720,600);
+
+        //Controls
+        scene.setOnKeyTyped(e->{
             if(e.getCharacter().equals("w")){
-                if(controller.player.getLayoutY()==250){
-                    controller.player.setLayoutY(250);
+                if(car.getY()-10<=190){
+                    car.setY(190);
                 }else{
-                    controller.player.setLayoutY(controller.player.getLayoutY() - 5);
+                    car.setY(car.getY()-10);
                 }
             }else if(e.getCharacter().equals("s")){
-                if(controller.player.getLayoutY()==520){
-                    controller.player.setLayoutY(520);
+                if(car.getY()+10>=520){
+                    car.setY(520);
                 }else{
-                    controller.player.setLayoutY(controller.player.getLayoutY() + 5);
+                    car.setY(car.getY()+10);
                 }
             }else if(e.getCharacter().equals("a")){
-                if(controller.player.getLayoutX()==5){
-                    controller.player.setLayoutX(5);
+                if(car.getX()-10<=13){
+                    car.setX(13);
                 }else{
-                    controller.player.setLayoutX(controller.player.getLayoutX() - 5);
+                    car.setX(car.getX()-10);
                 }
             }else if(e.getCharacter().equals("d")){
-                if(controller.player.getLayoutX()==445){
-                    controller.player.setLayoutX(445);
+                if(car.getX()+10>=487){
+                    car.setX(487);
                 }else{
-                    controller.player.setLayoutX(controller.player.getLayoutX() + 5);
+                    car.setX(car.getX()+10);
+                }
+            }else if(e.getCharacter().equals(" ")){
+                if(car.getY()-12<=190){
+                    car.setY(190);
+                }else{
+                    car.setY(car.getY()-15);
                 }
             }
         });
-        window.setScene(game);
+        window.setScene(scene);
         window.show();
     }
 
