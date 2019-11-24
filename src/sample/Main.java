@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -110,27 +111,7 @@ public class Main extends Application {
         for(int i=0;i<l.length;i++){
             l[i]=new RoadLens();
         }
-
-        //Set Axis Y
-        l[0].setY(360);
-        l[1].setY(120);
-        l[2].setY(-120);
-        l[3].setY(525);
-        l[4].setY(285);
-        l[5].setY(45);
-        l[6].setY(360);
-        l[7].setY(120);
-        l[8].setY(-120);
-        //Set Axis X
-        l[0].setX(132.5);
-        l[1].setX(132.5);
-        l[2].setX(132.5);
-        l[3].setX(268);
-        l[4].setX(268);
-        l[5].setX(268);
-        l[6].setX(403.5);
-        l[7].setX(403.5);
-        l[8].setX(403.5);
+        setScale(l);
 
         //AnchodPane settings
         root.getChildren().addAll(bg,car,left,right, sideNote);
@@ -176,6 +157,7 @@ public class Main extends Application {
                 }
             }
         });
+
         window.setScene(scene);
         window.show();
     }
@@ -183,4 +165,28 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
+    public void setScale(RoadLens[] l){
+        //Set Axis Y
+        l[0].setY(360);
+        l[1].setY(120);
+        l[2].setY(-120);
+        l[3].setY(525);
+        l[4].setY(285);
+        l[5].setY(45);
+        l[6].setY(360);
+        l[7].setY(120);
+        l[8].setY(-120);
+        //Set Axis X
+        l[0].setX(132.5);
+        l[1].setX(132.5);
+        l[2].setX(132.5);
+        l[3].setX(268);
+        l[4].setX(268);
+        l[5].setX(268);
+        l[6].setX(403.5);
+        l[7].setX(403.5);
+        l[8].setX(403.5);
+    }
+
 }
