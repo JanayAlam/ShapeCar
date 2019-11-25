@@ -168,9 +168,9 @@ public class Main extends Application {
 
     public void setScale(RoadLens[] l){
         //Set Axis Y
-        l[0].setY(360);
-        l[1].setY(120);
-        l[2].setY(-120);
+        l[0].setY(530);
+        l[1].setY(140);
+        l[2].setY(-270);
         l[3].setY(525);
         l[4].setY(285);
         l[5].setY(45);
@@ -178,9 +178,9 @@ public class Main extends Application {
         l[7].setY(120);
         l[8].setY(-120);
         //Set Axis X
-        l[0].setX(132.5);
-        l[1].setX(132.5);
-        l[2].setX(132.5);
+        l[0].setX(120);
+        l[1].setX(142);
+        l[2].setX(162);
         l[3].setX(268);
         l[4].setX(268);
         l[5].setX(268);
