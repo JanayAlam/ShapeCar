@@ -1,20 +1,17 @@
 package sample;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCharacterCombination;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -23,6 +20,9 @@ import javafx.stage.Stage;
 public class Main extends Application {
     private Stage window;
     public String user;
+    double x, y, w, h;
+    double xx,yy,ww,hh;
+    private GraphicsContext g;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -97,6 +97,7 @@ public class Main extends Application {
 
         //Car Create
         Car car=new Car();
+
         //car.setX(420);
         //car.setY(880);
 
@@ -159,7 +160,6 @@ public class Main extends Application {
                 }
             }
         });
-
         window.setScene(scene);
         window.show();
     }
