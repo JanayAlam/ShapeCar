@@ -37,7 +37,7 @@ public class Main extends Application {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("Menu.fxml"));
         Parent root= loader.load();
-        Scene menu=new Scene(root, 1280, 720);
+        Scene menu=new Scene(root, 1280, 900);
         MenuController controller=loader.getController();
         controller.setMain(this);
         controller.labelWelcome(name);
@@ -57,7 +57,7 @@ public class Main extends Application {
         Parent root= loader.load();
         StartUpController controller=loader.getController();
         controller.setMain(this);
-        Scene startUp=new Scene(root, 1280, 720);
+        Scene startUp=new Scene(root, 1280, 900);
         window.setScene(startUp);
         window.setOnCloseRequest( e -> {
             e.consume();
@@ -83,14 +83,14 @@ public class Main extends Application {
 
         //Vbox
         VBox sideNote=new VBox(0);
-        sideNote.setPrefSize(180,600);
-        sideNote.setLayoutX(550);
+        sideNote.setPrefSize(180,900);
+        sideNote.setLayoutX(1010);
         sideNote.setLayoutY(10);
         sideNote.setPadding(new Insets(10,10,0,10));
         sideNote.getChildren().addAll(labelScoreName,score);
 
         //Background Image
-        Image img=new Image("sample\\Road.png");
+        Image img=new Image("sample\\Road.png", 1000, 900, false, false);
         ImageView bg=new ImageView(img);
 
         //Car Create
@@ -100,11 +100,11 @@ public class Main extends Application {
 
         //Side lines
         SideLine left=new SideLine();
-        left.setX(1);
+        left.setX(10);
         left.setY(0);
 
         SideLine right=new SideLine();
-        right.setX(539);
+        right.setX(970);
         right.setY(0);
 
         //Road Lens
@@ -121,7 +121,7 @@ public class Main extends Application {
         }
 
         //Creating Scene
-        Scene scene=new Scene(root, 720,600);
+        Scene scene=new Scene(root, 1280,900);
 
         //Controls
         scene.setOnKeyTyped(e->{
