@@ -5,6 +5,6 @@ import javafx.scene.shape.Rectangle;
 
 class RoadLens extends Rectangle {
      RoadLens(){
-        super(14,150,Paint.valueOf("#BF9117"));
+        super(18,250,Paint.valueOf("#BF9117"));
     }
 }

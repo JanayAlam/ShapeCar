@@ -95,8 +95,8 @@ public class Main extends Application {
 
         //Car Create
         Car car=new Car();
-        car.setX(215);
-        car.setY(520);
+        //car.setX(420);
+        //car.setY(880);
 
         //Side lines
         SideLine left=new SideLine();
