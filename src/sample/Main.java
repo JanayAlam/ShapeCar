@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -36,7 +37,7 @@ public class Main extends Application {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("Menu.fxml"));
         Parent root= loader.load();
-        Scene menu=new Scene(root, 720, 600);
+        Scene menu=new Scene(root, 1280, 720);
         MenuController controller=loader.getController();
         controller.setMain(this);
         controller.labelWelcome(name);
@@ -54,10 +55,9 @@ public class Main extends Application {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("StartUp.fxml"));
         Parent root= loader.load();
-        Scene startUp=new Scene(root, 720, 600);
         StartUpController controller=loader.getController();
         controller.setMain(this);
-
+        Scene startUp=new Scene(root, 1280, 720);
         window.setScene(startUp);
         window.setOnCloseRequest( e -> {
             e.consume();
