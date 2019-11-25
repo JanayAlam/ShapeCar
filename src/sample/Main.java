@@ -171,22 +171,22 @@ public class Main extends Application {
         l[0].setY(530);
         l[1].setY(140);
         l[2].setY(-270);
-        l[3].setY(525);
-        l[4].setY(285);
-        l[5].setY(45);
-        l[6].setY(360);
-        l[7].setY(120);
-        l[8].setY(-120);
+        l[3].setY(700);
+        l[4].setY(290);
+        l[5].setY(-120);
+        l[6].setY(530);
+        l[7].setY(140);
+        l[8].setY(-270);
         //Set Axis X
-        l[0].setX(120);
-        l[1].setX(142);
-        l[2].setX(162);
-        l[3].setX(268);
-        l[4].setX(268);
-        l[5].setX(268);
-        l[6].setX(403.5);
-        l[7].setX(403.5);
-        l[8].setX(403.5);
+        for(int i=0;i<l.length;i++){
+            if(i==0 || i==1 || i==2){
+                l[i].setX(251.5);
+            }else if(i==3 || i==4 || i==5){
+                l[i].setX(491);
+            }else if(i==6 || i==7 || i==8){
+                l[i].setX(726);
+            }
+        }
     }
 
 }
