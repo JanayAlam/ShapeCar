@@ -20,9 +20,6 @@ import javafx.stage.Stage;
 public class Main extends Application {
     private Stage window;
     public String user;
-    double x, y, w, h;
-    double xx,yy,ww,hh;
-    private GraphicsContext g;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -190,5 +187,4 @@ public class Main extends Application {
             }
         }
     }
-
 }
