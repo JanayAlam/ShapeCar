@@ -138,10 +138,10 @@ public class Main extends Application {
                     car.setY(car.getY()+10);
                 }
             }else if(e.getCharacter().equals("a")){
-                if(car.getX()-10<=13){
-                    car.setX(13);
+                if(car.getX()-15<=35){
+                    car.setX(35);
                 }else{
-                    car.setX(car.getX()-10);
+                    car.setX(car.getX()-15);
                 }
             }else if(e.getCharacter().equals("d")){
                 if(car.getX()+10>=487){
