@@ -113,7 +113,7 @@ public class Main extends Application {
         }
         setScale(l);
 
-        //AnchodPane settings
+        //AnchorPane settings
         root.getChildren().addAll(bg,car,left,right, sideNote);
 
         for(int i=0; i<l.length;i++){
@@ -126,16 +126,16 @@ public class Main extends Application {
         //Controls
         scene.setOnKeyTyped(e->{
             if(e.getCharacter().equals("w")){
-                if(car.getY()-10<=190){
-                    car.setY(190);
+                if(car.getY()-15<=15){
+                    car.setY(15);
                 }else{
-                    car.setY(car.getY()-10);
+                    car.setY(car.getY()-15);
                 }
             }else if(e.getCharacter().equals("s")){
-                if(car.getY()+10>=520){
-                    car.setY(520);
+                if(car.getY()+15>=780){
+                    car.setY(780);
                 }else{
-                    car.setY(car.getY()+10);
+                    car.setY(car.getY()+15);
                 }
             }else if(e.getCharacter().equals("a")){
                 if(car.getX()-15<=35){
@@ -144,16 +144,16 @@ public class Main extends Application {
                     car.setX(car.getX()-15);
                 }
             }else if(e.getCharacter().equals("d")){
-                if(car.getX()+10>=487){
-                    car.setX(487);
+                if(car.getX()+15>=890){
+                    car.setX(890);
                 }else{
-                    car.setX(car.getX()+10);
+                    car.setX(car.getX()+15);
                 }
             }else if(e.getCharacter().equals(" ")){
-                if(car.getY()-12<=190){
-                    car.setY(190);
+                if(car.getY()-25<=15){
+                    car.setY(15);
                 }else{
-                    car.setY(car.getY()-15);
+                    car.setY(car.getY()-25);
                 }
             }
         });
