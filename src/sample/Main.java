@@ -12,20 +12,22 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCharacterCombination;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-    Stage window;
+    private Stage window;
     public String user;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         window=primaryStage;
-        window.setTitle("Shape Cars");
+        window.setTitle("Car Shape");
         window.setOnCloseRequest( e -> {
             e.consume();
             AlertBox.confirmBox();
