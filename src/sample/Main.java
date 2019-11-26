@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,7 +30,7 @@ public class Main extends Application {
             e.consume();
             AlertBox.confirmBox();
         });
-        showStartUp();
+        showNewGame();
     }
 
     public void showMenu(String name) throws Exception{
@@ -95,8 +96,17 @@ public class Main extends Application {
         //Car Create
         Car car=new Car();
 
-        //car.setX(420);
-        //car.setY(880);
+        //Enemy
+        Enemy e1=new Enemy();
+        e1.setX(90.75);
+        e1.setY(-200);
+        new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                sample.Enemy.placementY(e1);
+            }
+
+        }.start();
 
         //Side lines
         SideLine left=new SideLine();
@@ -114,7 +124,7 @@ public class Main extends Application {
         setScale(l);
 
         //AnchorPane settings
-        root.getChildren().addAll(bg,car,left,right, sideNote);
+        root.getChildren().addAll(bg, car, e1, left, right, sideNote);
 
         for(int i=0; i<l.length;i++){
             root.getChildren().add(l[i]);
@@ -157,6 +167,8 @@ public class Main extends Application {
                 }
             }
         });
+
+
         window.setScene(scene);
         window.show();
     }
@@ -187,4 +199,5 @@ public class Main extends Application {
             }
         }
     }
+
 }
