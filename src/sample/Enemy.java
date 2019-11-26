@@ -4,25 +4,34 @@ import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
 public class Enemy extends Rectangle {
-    static double n=0.01;
+    double n=0.001;
     public Enemy(){
         super(100, 130, Paint.valueOf("#FFFFFF"));
     }
-    static void placementY(Enemy e){
+    public void placementY(){
         if(n<=4){
-            if(e.getY()>=930){
-                e.setY(-250);
+            if(getY()>=1000){
+                setY(-250);
             }else{
-                e.setY(e.getY()+(3+n));
+                setY(getY()+(3+n));
             }
             n+=0.002;
         }else{
-            if(e.getY()>=930){
-                e.setY(-400);
+            if(getY()>=1000){
+                setY(-400);
             }else{
-                e.setY(e.getY()+(3+n));
+                setY(getY()+(3+n));
             }
             n+=0.001;
+        }
+        if(getX()==90.75 && getY()>1000){
+            setX(321.25);
+        }else if(getX()==321.25 && getY()>1000){
+            setX(798);
+        }else if(getX()==558.5 && getY()>1000){
+            setX(90.75);
+        }else if(getX()==798 && getY()>1000){
+            setX(558.5);
         }
     }
 }

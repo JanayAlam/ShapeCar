@@ -99,13 +99,28 @@ public class Main extends Application {
         //Enemy
         Enemy e1=new Enemy();
         e1.setX(90.75);
-        e1.setY(-200);
+        e1.setY(-700);
+
+        Enemy e2=new Enemy();
+        e2.setX(321.25);
+        e2.setY(-400);
+
+        Enemy e3=new Enemy();
+        e3.setX(558.5);
+        e3.setY(-200);
+
+        Enemy e4=new Enemy();
+        e4.setX(798);
+        e4.setY(-1000);
+
         new AnimationTimer() {
             @Override
             public void handle(long now) {
-                sample.Enemy.placementY(e1);
+                e1.placementY();
+                e2.placementY();
+                e3.placementY();
+                e4.placementY();
             }
-
         }.start();
 
         //Side lines
@@ -124,7 +139,7 @@ public class Main extends Application {
         setScale(l);
 
         //AnchorPane settings
-        root.getChildren().addAll(bg, car, e1, left, right, sideNote);
+        root.getChildren().addAll(bg, car, e1, e2, e3, e4, left, right, sideNote);
 
         for(int i=0; i<l.length;i++){
             root.getChildren().add(l[i]);
@@ -136,38 +151,37 @@ public class Main extends Application {
         //Controls
         scene.setOnKeyTyped(e->{
             if(e.getCharacter().equals("w")){
-                if(car.getY()-15<=15){
-                    car.setY(15);
-                }else{
-                    car.setY(car.getY()-15);
-                }
-            }else if(e.getCharacter().equals("s")){
-                if(car.getY()+15>=780){
-                    car.setY(780);
-                }else{
-                    car.setY(car.getY()+15);
-                }
-            }else if(e.getCharacter().equals("a")){
-                if(car.getX()-15<=35){
-                    car.setX(35);
-                }else{
-                    car.setX(car.getX()-15);
-                }
-            }else if(e.getCharacter().equals("d")){
-                if(car.getX()+15>=890){
-                    car.setX(890);
-                }else{
-                    car.setX(car.getX()+15);
-                }
-            }else if(e.getCharacter().equals(" ")){
-                if(car.getY()-25<=15){
-                    car.setY(15);
+                if(car.getY()-25<=25){
+                    car.setY(25);
                 }else{
                     car.setY(car.getY()-25);
                 }
+            }else if(e.getCharacter().equals("s")){
+                if(car.getY()+25>=780){
+                    car.setY(780);
+                }else{
+                    car.setY(car.getY()+25);
+                }
+            }else if(e.getCharacter().equals("a")){
+                if(car.getX()-25<=35){
+                    car.setX(35);
+                }else{
+                    car.setX(car.getX()-25);
+                }
+            }else if(e.getCharacter().equals("d")){
+                if(car.getX()+25>=890){
+                    car.setX(890);
+                }else{
+                    car.setX(car.getX()+25);
+                }
+            }else if(e.getCharacter().equals(" ")){
+                if(car.getY()-35<=25){
+                    car.setY(35);
+                }else{
+                    car.setY(car.getY()-35);
+                }
             }
         });
-
 
         window.setScene(scene);
         window.show();
