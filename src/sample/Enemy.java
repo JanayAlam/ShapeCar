@@ -4,7 +4,7 @@ import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
 public class Enemy extends Rectangle {
-    double n=0.001;
+    double n=0.00001;
     public Enemy(){
         super(100, 130, Paint.valueOf("#FFFFFF"));
     }
@@ -13,16 +13,16 @@ public class Enemy extends Rectangle {
             if(getY()>=1000){
                 setY(-250);
             }else{
-                setY(getY()+(3+n));
+                setY(getY()+(2+n));
             }
-            n+=0.002;
+            n+=0.00001;
         }else{
             if(getY()>=1000){
                 setY(-400);
             }else{
-                setY(getY()+(3+n));
+                setY(getY()+(2+n));
             }
-            n+=0.001;
+            n+=0.000015;
         }
         if(getX()==90.75 && getY()>1000){
             setX(321.25);
