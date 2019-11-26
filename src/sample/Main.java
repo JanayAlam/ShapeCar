@@ -30,7 +30,7 @@ public class Main extends Application {
             e.consume();
             AlertBox.confirmBox();
         });
-        showNewGame();
+        showStartUp();
     }
 
     public void showMenu(String name) throws Exception{
