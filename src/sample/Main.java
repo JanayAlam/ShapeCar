@@ -120,6 +120,15 @@ public class Main extends Application {
                 e2.placementY();
                 e3.placementY();
                 e4.placementY();
+                l[0].placementY();
+                l[1].placementY();
+                l[2].placementY();
+                l[3].placementY();
+                l[4].placementY();
+                l[5].placementY();
+                l[6].placementY();
+                l[7].placementY();
+                l[8].placementY();
             }
         }.start();
 
