@@ -20,6 +20,7 @@ public class MenuController {
     @FXML
     private Button buttonExit;
 
+
     public void setMain(Main main){
         this.main=main;
     }

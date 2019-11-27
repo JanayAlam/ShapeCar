@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StartUpController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StartUpController">
    <children>
-      <Button fx:id="buttonPlay" layoutX="568.0" layoutY="526.0" mnemonicParsing="false" onAction="#play" prefHeight="20.0" prefWidth="92.0" styleClass="buttonPlay" stylesheets="@CSS/StartUp.css" text="Play">
+      <Button fx:id="buttonPlay" layoutX="594.0" layoutY="428.0" mnemonicParsing="false" onAction="#play" prefHeight="20.0" prefWidth="92.0" styleClass="buttonPlay" stylesheets="@CSS/StartUp.css" text="Play">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -16,7 +16,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="textFieldName" layoutX="423.0" layoutY="458.0" prefHeight="55.0" prefWidth="382.0" promptText="Enter your name">
+      <TextField fx:id="textFieldName" layoutX="449.0" layoutY="360.0" prefHeight="55.0" prefWidth="382.0" promptText="Enter your name">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
