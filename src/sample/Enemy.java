@@ -26,13 +26,13 @@ public class Enemy extends Rectangle {
             }
             n += 0.00005;
         }
-        if(getX()==90.75 && getY()>1000){
+        if(getX()==90.75 && getY()>950){
             setX(558.5);
-        }else if(getX()==321.25 && getY()>1000){
+        }else if(getX()==321.25 && getY()>950){
             setX(798);
-        }else if(getX()==558.5 && getY()>1000){
+        }else if(getX()==558.5 && getY()>950){
             setX(90.75);
-        }else if(getX()==798 && getY()>1000){
+        }else if(getX()==798 && getY()>950){
             setX(321.25);
         }
 
