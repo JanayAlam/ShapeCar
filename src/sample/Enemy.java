@@ -24,7 +24,7 @@ public class Enemy extends Rectangle {
             } else {
                 setY(getY() + (2 + n));
             }
-            n += 0.000015;
+            n += 0.00005;
         }
         if(getX()==90.75 && getY()>1000){
             setX(558.5);

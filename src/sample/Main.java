@@ -37,7 +37,7 @@ public class Main extends Application {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("Menu.fxml"));
         Parent root= loader.load();
-        Scene menu=new Scene(root, 1280, 900);
+        Scene menu=new Scene(root, 1280, 720);
         MenuController controller=loader.getController();
         controller.setMain(this);
         controller.labelWelcome(name);
@@ -57,7 +57,7 @@ public class Main extends Application {
         Parent root= loader.load();
         StartUpController controller=loader.getController();
         controller.setMain(this);
-        Scene startUp=new Scene(root, 1280, 900);
+        Scene startUp=new Scene(root, 1280, 720);
         window.setScene(startUp);
         window.setOnCloseRequest( e -> {
             e.consume();
@@ -83,14 +83,14 @@ public class Main extends Application {
 
         //Vbox
         VBox sideNote=new VBox(0);
-        sideNote.setPrefSize(180,900);
+        sideNote.setPrefSize(180,720);
         sideNote.setLayoutX(1010);
         sideNote.setLayoutY(10);
         sideNote.setPadding(new Insets(10,10,0,10));
         sideNote.getChildren().addAll(labelScoreName,score);
 
         //Background Image
-        Image img=new Image("sample\\Road.png", 1000, 900, false, false);
+        Image img=new Image("sample\\Road.png", 1000, 720, false, false);
         ImageView bg=new ImageView(img);
 
         //Car Create
@@ -155,7 +155,7 @@ public class Main extends Application {
         }
 
         //Creating Scene
-        Scene scene=new Scene(root, 1280,900);
+        Scene scene=new Scene(root, 1280,720);
 
         //Controls
         scene.setOnKeyTyped(e->{
@@ -166,8 +166,8 @@ public class Main extends Application {
                     car.setY(car.getY()-25);
                 }
             }else if(e.getCharacter().equals("s")){
-                if(car.getY()+25>=780){
-                    car.setY(780);
+                if(car.getY()+25>=600){
+                    car.setY(600);
                 }else{
                     car.setY(car.getY()+25);
                 }
@@ -202,15 +202,15 @@ public class Main extends Application {
 
     public void setScale(RoadLens[] l){
         //Set Axis Y
-        l[0].setY(530);
-        l[1].setY(140);
-        l[2].setY(-270);
-        l[3].setY(700);
-        l[4].setY(290);
-        l[5].setY(-120);
-        l[6].setY(530);
-        l[7].setY(140);
-        l[8].setY(-270);
+        l[0].setY(350);
+        l[1].setY(-40);
+        l[2].setY(-450);
+        l[3].setY(500);
+        l[4].setY(110);
+        l[5].setY(-300);
+        l[6].setY(350);
+        l[7].setY(-40);
+        l[8].setY(-450);
         //Set Axis X
         for(int i=0;i<l.length;i++){
             if(i==0 || i==1 || i==2){

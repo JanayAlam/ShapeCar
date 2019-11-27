@@ -5,6 +5,6 @@ import javafx.scene.shape.Rectangle;
 
 public class SideLine extends Rectangle {
     public SideLine(){
-        super(20,900, Paint.valueOf("#F3F4F4"));
+        super(20,720, Paint.valueOf("#F3F4F4"));
     }
 }
