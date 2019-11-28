@@ -15,6 +15,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -87,11 +90,23 @@ public class Main extends Application {
         sideNote.setLayoutX(1010);
         sideNote.setLayoutY(10);
         sideNote.setPadding(new Insets(10,10,0,10));
-        sideNote.getChildren().addAll(labelScoreName,score);
 
         //Background Image
         Image img=new Image("sample\\Road.png", 1000, 720, false, false);
         ImageView bg=new ImageView(img);
+
+        //ButtonBack
+        Button buttonBackToMain=new Button("Main Menu");
+        buttonBackToMain.setPrefSize(250,45);
+        buttonBackToMain.setOnAction(e -> {
+            try{
+                showMenu(user);
+            }catch (Exception i) {
+                i.printStackTrace();
+            }
+        });
+
+        sideNote.getChildren().addAll(labelScoreName,score,buttonBackToMain);
 
         //Car Create
         Car car=new Car();
@@ -117,9 +132,22 @@ public class Main extends Application {
             @Override
             public void handle(long now) {
                 e1.placementY();
+                if(car.getX()<e1.getX()+e1.getWidth() && car.getY()<e1.getY()+e1.getHeight() && car.getY()+car.getHeight()>e1.getY() && car.getX()+car.getWidth()>e1.getX()){
+                    System.out.println("Collision");
+                }
                 e2.placementY();
+                if(car.getX()<e2.getX()+e2.getWidth() && car.getY()<e2.getY()+e2.getHeight() && car.getY()+car.getHeight()>e2.getY() && car.getX()+car.getWidth()>e2.getX()){
+                    System.out.println("Collision");
+                }
                 e3.placementY();
+                if(car.getX()<e3.getX()+e3.getWidth() && car.getY()<e3.getY()+e3.getHeight() && car.getY()+car.getHeight()>e3.getY() && car.getX()+car.getWidth()>e3.getX()){
+                    System.out.println("Collision");
+                }
                 e4.placementY();
+                if(car.getX()<e4.getX()+e4.getWidth() && car.getY()<e4.getY()+e4.getHeight() && car.getY()+car.getHeight()>e4.getY() && car.getX()+car.getWidth()>e4.getX()){
+                    System.out.println("Collision");
+                }
+
                 l[0].placementY();
                 l[1].placementY();
                 l[2].placementY();

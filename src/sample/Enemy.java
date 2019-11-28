@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
@@ -12,14 +13,14 @@ public class Enemy extends Rectangle {
 
     public void placementY() {
         if (n <= 4) {
-            if (getY() >= 1000) {
+            if (getY() >= 950) {
                 setY(-250);
             } else {
                 setY(getY() + (2 + n));
             }
             n += 0.00001;
         } else {
-            if (getY() >= 1000) {
+            if (getY() >= 950) {
                 setY(-400);
             } else {
                 setY(getY() + (2 + n));

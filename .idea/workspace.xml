@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project/sample/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/sample/Menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project/sample/StartUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/sample/StartUp.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/StartUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/StartUp.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/StartUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/StartUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +118,7 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-13.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -190,7 +186,7 @@
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-13.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -399,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574882101323</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Updated">
+      <created>1574884558877</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1574884558877</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
