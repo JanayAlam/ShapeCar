@@ -131,32 +131,71 @@ public class Main extends Application {
         new AnimationTimer() {
             @Override
             public void handle(long now) {
+                //Controls
                 e1.placementY();
                 if(car.getX()<e1.getX()+e1.getWidth() && car.getY()<e1.getY()+e1.getHeight() && car.getY()+car.getHeight()>e1.getY() && car.getX()+car.getWidth()>e1.getX()){
-                    System.out.println("Collision");
-                }
-                e2.placementY();
-                if(car.getX()<e2.getX()+e2.getWidth() && car.getY()<e2.getY()+e2.getHeight() && car.getY()+car.getHeight()>e2.getY() && car.getX()+car.getWidth()>e2.getX()){
-                    System.out.println("Collision");
-                }
-                e3.placementY();
-                if(car.getX()<e3.getX()+e3.getWidth() && car.getY()<e3.getY()+e3.getHeight() && car.getY()+car.getHeight()>e3.getY() && car.getX()+car.getWidth()>e3.getX()){
-                    System.out.println("Collision");
-                }
-                e4.placementY();
-                if(car.getX()<e4.getX()+e4.getWidth() && car.getY()<e4.getY()+e4.getHeight() && car.getY()+car.getHeight()>e4.getY() && car.getX()+car.getWidth()>e4.getX()){
-                    System.out.println("Collision");
+                    gameOver();
                 }
 
+                e2.placementY();
+                if(car.getX()<e2.getX()+e2.getWidth() && car.getY()<e2.getY()+e2.getHeight() && car.getY()+car.getHeight()>e2.getY() && car.getX()+car.getWidth()>e2.getX()){
+                    gameOver();
+                }
+
+                e3.placementY();
+                if(car.getX()<e3.getX()+e3.getWidth() && car.getY()<e3.getY()+e3.getHeight() && car.getY()+car.getHeight()>e3.getY() && car.getX()+car.getWidth()>e3.getX()){
+                    gameOver();
+                }
+
+                e4.placementY();
+                if(car.getX()<e4.getX()+e4.getWidth() && car.getY()<e4.getY()+e4.getHeight() && car.getY()+car.getHeight()>e4.getY() && car.getX()+car.getWidth()>e4.getX()){
+                    gameOver();
+                }
+
+                //RoadLens
                 l[0].placementY();
+                if(car.getX()<l[0].getX()+l[0].getWidth() && car.getY()<l[0].getY()+l[0].getHeight() && car.getY()+car.getHeight()>l[0].getY() && car.getX()+car.getWidth()>l[0].getX()){
+                    System.out.println("C");
+                }
+
                 l[1].placementY();
+                if(car.getX()<l[1].getX()+l[1].getWidth() && car.getY()<l[1].getY()+l[1].getHeight() && car.getY()+car.getHeight()>l[1].getY() && car.getX()+car.getWidth()>l[1].getX()){
+                    System.out.println("C");
+                }
+
                 l[2].placementY();
+                if(car.getX()<l[2].getX()+l[2].getWidth() && car.getY()<l[2].getY()+l[2].getHeight() && car.getY()+car.getHeight()>l[2].getY() && car.getX()+car.getWidth()>l[2].getX()){
+                    System.out.println("C");
+                }
+
                 l[3].placementY();
+                if(car.getX()<l[3].getX()+l[3].getWidth() && car.getY()<l[3].getY()+l[3].getHeight() && car.getY()+car.getHeight()>l[3].getY() && car.getX()+car.getWidth()>l[3].getX()){
+                    System.out.println("C");
+                }
+
                 l[4].placementY();
+                if(car.getX()<l[4].getX()+l[4].getWidth() && car.getY()<l[4].getY()+l[4].getHeight() && car.getY()+car.getHeight()>l[4].getY() && car.getX()+car.getWidth()>l[4].getX()){
+                    System.out.println("C");
+                }
+
                 l[5].placementY();
+                if(car.getX()<l[5].getX()+l[5].getWidth() && car.getY()<l[5].getY()+l[5].getHeight() && car.getY()+car.getHeight()>l[5].getY() && car.getX()+car.getWidth()>l[5].getX()){
+                    System.out.println("C");
+                }
+
                 l[6].placementY();
+                if(car.getX()<l[6].getX()+l[6].getWidth() && car.getY()<l[6].getY()+l[6].getHeight() && car.getY()+car.getHeight()>l[6].getY() && car.getX()+car.getWidth()>l[6].getX()){
+                    System.out.println("C");
+                }
                 l[7].placementY();
+                if(car.getX()<l[7].getX()+l[7].getWidth() && car.getY()<l[7].getY()+l[7].getHeight() && car.getY()+car.getHeight()>l[7].getY() && car.getX()+car.getWidth()>l[7].getX()){
+                    System.out.println("C");
+                }
+
                 l[8].placementY();
+                if(car.getX()<l[8].getX()+l[8].getWidth() && car.getY()<l[8].getY()+l[8].getHeight() && car.getY()+car.getHeight()>l[8].getY() && car.getX()+car.getWidth()>l[8].getX()){
+                    System.out.println("C");
+                }
             }
         }.start();
 
@@ -251,4 +290,7 @@ public class Main extends Application {
         }
     }
 
+    public void gameOver(){
+        System.out.println("Collision");
+    }
 }
