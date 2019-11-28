@@ -78,13 +78,6 @@ public class Main extends Application {
         RoadLens[] l=new RoadLens[9];
         AnchorPane root=new AnchorPane();
 
-        //Labels
-        Label labelScoreName=new Label("Score");
-        labelScoreName.setFont(new Font("Arial", 20));
-
-        Label score=new Label("1506");
-        score.setFont(new Font("Arial", 60));
-
         //Vbox
         VBox sideNote=new VBox(0);
         sideNote.setPrefSize(180,720);
@@ -107,8 +100,6 @@ public class Main extends Application {
             }
         });
 
-        sideNote.getChildren().addAll(labelScoreName,score,buttonBackToMain);
-
         //Car Create
         Car car=new Car();
 
@@ -130,6 +121,7 @@ public class Main extends Application {
         e4.setY(-1000);
 
         new AnimationTimer() {
+
             @Override
             public void handle(long now) {
                 //Controls
@@ -203,6 +195,15 @@ public class Main extends Application {
                 }
             }
         }.start();
+
+        //Labels
+        Label labelScoreName=new Label("Score");
+        labelScoreName.setFont(new Font("Arial", 20));
+        Label score=new Label("0");
+        score.setFont(new Font("Arial", 60));
+
+        //VBox
+        sideNote.getChildren().addAll(labelScoreName,score,buttonBackToMain);
 
         //Side lines
         SideLine left=new SideLine();

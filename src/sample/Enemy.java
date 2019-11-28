@@ -6,6 +6,7 @@ import javafx.scene.shape.Rectangle;
 
 public class Enemy extends Rectangle {
     double n = 0.00001;
+    static double score=0;
 
     public Enemy() {
         super(100, 130, Paint.valueOf("#FFFFFF"));
@@ -55,4 +56,5 @@ public class Enemy extends Rectangle {
             }
         }*/
     }
+
 }
