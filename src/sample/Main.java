@@ -23,7 +23,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     private Stage window;
-    public String user;
+    String user;
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -135,21 +136,25 @@ public class Main extends Application {
                 e1.placementY();
                 if(car.getX()<e1.getX()+e1.getWidth() && car.getY()<e1.getY()+e1.getHeight() && car.getY()+car.getHeight()>e1.getY() && car.getX()+car.getWidth()>e1.getX()){
                     gameOver();
+                    stop();
                 }
 
                 e2.placementY();
                 if(car.getX()<e2.getX()+e2.getWidth() && car.getY()<e2.getY()+e2.getHeight() && car.getY()+car.getHeight()>e2.getY() && car.getX()+car.getWidth()>e2.getX()){
                     gameOver();
+                    stop();
                 }
 
                 e3.placementY();
                 if(car.getX()<e3.getX()+e3.getWidth() && car.getY()<e3.getY()+e3.getHeight() && car.getY()+car.getHeight()>e3.getY() && car.getX()+car.getWidth()>e3.getX()){
                     gameOver();
+                    stop();
                 }
 
                 e4.placementY();
                 if(car.getX()<e4.getX()+e4.getWidth() && car.getY()<e4.getY()+e4.getHeight() && car.getY()+car.getHeight()>e4.getY() && car.getX()+car.getWidth()>e4.getX()){
                     gameOver();
+                    stop();
                 }
 
                 //RoadLens
