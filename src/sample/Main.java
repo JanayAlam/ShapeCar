@@ -127,25 +127,41 @@ public class Main extends Application {
                 //Controls
                 e1.placementY();
                 if(car.getX()<e1.getX()+e1.getWidth() && car.getY()<e1.getY()+e1.getHeight() && car.getY()+car.getHeight()>e1.getY() && car.getX()+car.getWidth()>e1.getX()){
-                    gameOver();
+                    try{
+                        gameOver();
+                    }catch (Exception i) {
+                        i.printStackTrace();
+                    }
                     stop();
                 }
 
                 e2.placementY();
                 if(car.getX()<e2.getX()+e2.getWidth() && car.getY()<e2.getY()+e2.getHeight() && car.getY()+car.getHeight()>e2.getY() && car.getX()+car.getWidth()>e2.getX()){
-                    gameOver();
+                    try{
+                        gameOver();
+                    }catch (Exception i) {
+                        i.printStackTrace();
+                    }
                     stop();
                 }
 
                 e3.placementY();
                 if(car.getX()<e3.getX()+e3.getWidth() && car.getY()<e3.getY()+e3.getHeight() && car.getY()+car.getHeight()>e3.getY() && car.getX()+car.getWidth()>e3.getX()){
-                    gameOver();
+                    try{
+                        gameOver();
+                    }catch (Exception i) {
+                        i.printStackTrace();
+                    }
                     stop();
                 }
 
                 e4.placementY();
                 if(car.getX()<e4.getX()+e4.getWidth() && car.getY()<e4.getY()+e4.getHeight() && car.getY()+car.getHeight()>e4.getY() && car.getX()+car.getWidth()>e4.getX()){
-                    gameOver();
+                    try{
+                        gameOver();
+                    }catch (Exception i) {
+                        i.printStackTrace();
+                    }
                     stop();
                 }
 
@@ -296,7 +312,16 @@ public class Main extends Application {
         }
     }
 
-    public void gameOver(){
+    void gameOver() throws Exception{
         System.out.println("Collision");
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("GameOverWindow.fxml"));
+        Parent root= loader.load();
+        GameOverWindow controller=loader.getController();
+        controller.setMain(this);
+        Scene gameOver=new Scene(root, 600, 350);
+        Stage stage=new Stage();
+        stage.setScene(gameOver);
+        stage.show();
     }
 }

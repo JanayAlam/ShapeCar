@@ -23,7 +23,7 @@
             <Font size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="labelControlKeys" alignment="TOP_LEFT" buttonType="RAISED" layoutX="64.0" layoutY="360.0" prefHeight="45.0" prefWidth="250.0" ripplerFill="#1763ae" text="Control Keys" textAlignment="CENTER">
+      <JFXButton fx:id="labelControlKeys" alignment="TOP_LEFT" buttonType="RAISED" layoutX="64.0" layoutY="360.0" prefHeight="45.0" prefWidth="250.0" ripplerFill="#1763ae" text="Control Keys">
          <font>
             <Font size="20.0" />
          </font>
