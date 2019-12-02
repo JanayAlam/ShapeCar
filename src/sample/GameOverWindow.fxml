@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameOverWindow">
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameOverWindow">
    <children>
       <JFXButton fx:id="buttonMainMenu" buttonType="RAISED" layoutY="300.0" onAction="#back" prefHeight="50.0" prefWidth="300.0" ripplerFill="#135ca4" text="Main Menu" />
       <JFXButton fx:id="buttonExit" buttonType="RAISED" layoutX="300.0" layoutY="300.0" onAction="#exit" prefHeight="50.0" prefWidth="300.0" ripplerFill="#a31714" text="Exit to Desktop" />
@@ -17,7 +16,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="lebelScore" layoutX="309.0" layoutY="154.0" text="1029">
+      <Label fx:id="labelScore" layoutX="309.0" layoutY="154.0" text="1029">
          <font>
             <Font size="24.0" />
          </font>

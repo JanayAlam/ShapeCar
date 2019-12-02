@@ -2,11 +2,13 @@ package sample;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -74,6 +76,8 @@ public class Main extends Application {
         AlertBox.Credits();
     }
 
+    double s=0;
+
     public void showNewGame() throws Exception{
         RoadLens[] l=new RoadLens[9];
         AnchorPane root=new AnchorPane();
@@ -119,6 +123,7 @@ public class Main extends Application {
         Enemy e4=new Enemy();
         e4.setX(798);
         e4.setY(-1000);
+
 
         new AnimationTimer() {
 
@@ -215,8 +220,9 @@ public class Main extends Application {
         //Labels
         Label labelScoreName=new Label("Score");
         labelScoreName.setFont(new Font("Arial", 20));
-        Label score=new Label("0");
+        Label score=new Label(String.valueOf(s));
         score.setFont(new Font("Arial", 60));
+
 
         //VBox
         sideNote.getChildren().addAll(labelScoreName,score,buttonBackToMain);
@@ -313,7 +319,6 @@ public class Main extends Application {
     }
 
     void gameOver() throws Exception{
-        System.out.println("Collision");
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("GameOverWindow.fxml"));
         Parent root= loader.load();

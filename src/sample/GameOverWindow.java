@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 public class GameOverWindow {
     Main main;
     @FXML
-    Label lebelScore;
+    Label labelScore;
     @FXML
     Label labelUser;
     @FXML
