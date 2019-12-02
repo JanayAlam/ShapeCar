@@ -20,7 +20,10 @@ public class Main extends Application {
     private Stage window;
     String user;
     int s=0;
-    String up, down, left, right;
+    String up="w";
+    String down="s";
+    String left="a";
+    String right="d";
 
 
     @Override
@@ -239,13 +242,13 @@ public class Main extends Application {
         sideNote.getChildren().addAll(labelScoreName,score,buttonBackToMain);
 
         //Side lines
-        SideLine left=new SideLine();
-        left.setX(10);
-        left.setY(0);
+        SideLine leftLine=new SideLine();
+        leftLine.setX(10);
+        leftLine.setY(0);
 
-        SideLine right=new SideLine();
-        right.setX(970);
-        right.setY(0);
+        SideLine rightLine=new SideLine();
+        rightLine.setX(970);
+        rightLine.setY(0);
 
         //Road Lens
         for(int i=0;i<l.length;i++){
@@ -254,46 +257,41 @@ public class Main extends Application {
         setScale(l);
 
         //AnchorPane settings
-        root.getChildren().addAll(bg, car, e1, e2, e3, e4, left, right, sideNote);
+        root.getChildren().addAll(bg, e1, e2, e3, e4, leftLine, rightLine, sideNote);
 
         for(int i=0; i<l.length;i++){
             root.getChildren().add(l[i]);
         }
+        root.getChildren().add(car);
 
         //Creating Scene
         Scene scene=new Scene(root, 1280,720);
 
         //Controls
         scene.setOnKeyTyped(e->{
-            if(e.getCharacter().equals("w")){
+            if(e.getCharacter().equals(this.up)){
                 if(car.getY()-25<=25){
                     car.setY(25);
                 }else{
                     car.setY(car.getY()-25);
                 }
-            }else if(e.getCharacter().equals("s")){
+            }else if(e.getCharacter().equals(this.down)){
                 if(car.getY()+25>=600){
                     car.setY(600);
                 }else{
                     car.setY(car.getY()+25);
                 }
-            }else if(e.getCharacter().equals("a")){
+            }else if(e.getCharacter().equals(this.left)){
                 if(car.getX()-25<=35){
                     car.setX(35);
                 }else{
                     car.setX(car.getX()-25);
                 }
-            }else if(e.getCharacter().equals("d")){
+            }else if(e.getCharacter().equals(this.right)){
                 if(car.getX()+25>=890){
                     car.setX(890);
                 }else{
                     car.setX(car.getX()+25);
-                }
-            }else if(e.getCharacter().equals(" ")){
-                if(car.getY()-35<=25){
-                    car.setY(35);
-                }else{
-                    car.setY(car.getY()-35);
                 }
             }
         });
