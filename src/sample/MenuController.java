@@ -41,9 +41,17 @@ public class MenuController {
 
     @FXML
     public void setNewGame(){
-
         try {
             main.showNewGame();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void setControlKeys(){
+        try {
+            main.showControl();
         }catch (Exception e){
             e.printStackTrace();
         }

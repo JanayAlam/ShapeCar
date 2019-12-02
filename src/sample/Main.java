@@ -26,7 +26,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         window=primaryStage;
-        window.setTitle("Car Shape");
+        window.setTitle("ShapeCars");
         window.setOnCloseRequest( e -> {
             e.consume();
             AlertBox.confirmBox();
@@ -300,6 +300,25 @@ public class Main extends Application {
 
         window.setScene(scene);
         window.show();
+    }
+
+    public void showControl() throws Exception{
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("Controls.fxml"));
+        Parent root= loader.load();
+        Scene control=new Scene(root, 1280, 720);
+        ControlsColtroller controller=loader.getController();
+        controller.setMain(this);
+        window.setScene(control);
+        window.setOnCloseRequest( e -> {
+            e.consume();
+            AlertBox.confirmBox();
+        });
+        window.show();
+    }
+
+    public void showNewKey() throws Exception{
+
     }
 
     public static void main(String[] args) {
