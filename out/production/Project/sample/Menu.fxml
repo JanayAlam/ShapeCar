@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,31 +10,61 @@
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuController">
    <children>
-      <Label layoutX="63.0" layoutY="110.0" text="SHAPEcars">
+      <Label layoutX="63.0" layoutY="134.0" text="SHAPEcars">
          <font>
-            <Font name="System Bold" size="50.0" />
+            <Font name="System Bold" size="60.0" />
          </font>
       </Label>
-      <Label fx:id="labelWelcome" layoutX="64.0" layoutY="183.0" text="Welcome" textAlignment="RIGHT">
+      <Label fx:id="labelWelcome" layoutX="64.0" layoutY="264.0" text="Welcome" textAlignment="RIGHT">
          <font>
-            <Font size="18.0" />
+            <Font size="20.0" />
          </font></Label>
-      <JFXButton fx:id="buttonNewGame" alignment="TOP_LEFT" buttonType="RAISED" layoutX="64.0" layoutY="315.0" onAction="#setNewGame" prefHeight="45.0" prefWidth="250.0" ripplerFill="#1763ae" text="New Game">
+      <JFXButton fx:id="buttonNewGame" alignment="TOP_LEFT" buttonType="RAISED" layoutX="64.0" layoutY="291.0" onAction="#setNewGame" prefHeight="45.0" prefWidth="250.0" ripplerFill="#1763ae" text="New Game">
          <font>
-            <Font size="20.0" />
+            <Font size="25.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/play-button-arrowhead.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
-      <JFXButton fx:id="labelControlKeys" alignment="TOP_LEFT" buttonType="RAISED" layoutX="64.0" layoutY="360.0" prefHeight="45.0" prefWidth="250.0" ripplerFill="#1763ae" text="Control Keys">
+      <JFXButton fx:id="labelControlKeys" alignment="TOP_LEFT" buttonType="RAISED" layoutX="64.0" layoutY="345.0" prefHeight="45.0" prefWidth="250.0" ripplerFill="#1763ae" text="Control Keys">
          <font>
-            <Font size="20.0" />
+            <Font size="25.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/settings.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
-      <JFXButton fx:id="buttonCredits" alignment="TOP_LEFT" buttonType="RAISED" layoutX="64.0" layoutY="405.0" onAction="#setCredits" prefHeight="45.0" prefWidth="250.0" ripplerFill="#1763ae" text="Credits">
+      <JFXButton fx:id="buttonCredits" alignment="TOP_LEFT" buttonType="RAISED" layoutX="64.0" layoutY="399.0" onAction="#setCredits" prefHeight="45.0" prefWidth="250.0" ripplerFill="#1763ae" text="Credits">
          <font>
-            <Font size="20.0" />
+            <Font size="25.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/web-programming.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
-      <JFXButton fx:id="buttonExit" buttonType="RAISED" layoutX="64.0" layoutY="515.0" onAction="#setButtonExit" prefHeight="65.0" prefWidth="250.0" ripplerFill="#ae1414" text="EXIT">
+      <JFXButton fx:id="buttonExit" alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="63.0" layoutY="453.0" onAction="#setButtonExit" prefHeight="82.0" prefWidth="250.0" ripplerFill="#ae1414" text="EXIT">
          <graphic>
             <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -44,6 +75,9 @@
          <font>
             <Font size="25.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
    </children>
 </AnchorPane>

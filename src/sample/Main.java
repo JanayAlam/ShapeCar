@@ -20,6 +20,7 @@ public class Main extends Application {
     private Stage window;
     String user;
     int s=0;
+    String up, down, left, right;
 
 
     @Override
