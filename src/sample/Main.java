@@ -316,7 +316,18 @@ public class Main extends Application {
     }
 
     public void showNewKey() throws Exception{
-
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getResource("NewKeys.fxml"));
+        Parent root= loader.load();
+        Scene KeysControl=new Scene(root, 1280, 720);
+        NewKeysController controller=loader.getController();
+        controller.setMain(this);
+        window.setScene(KeysControl);
+        window.setOnCloseRequest( e -> {
+            e.consume();
+            AlertBox.confirmBox();
+        });
+        window.show();
     }
 
     public static void main(String[] args) {

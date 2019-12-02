@@ -35,23 +35,23 @@
          </graphic>
       </JFXButton>
       <Separator layoutY="645.0" prefWidth="1280.0" />
-      <Separator layoutX="640.0" layoutY="72.5" orientation="VERTICAL" prefHeight="500.0" />
-      <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="248.0" text="Move Up">
+      <Separator layoutX="637.0" layoutY="72.5" orientation="VERTICAL" prefHeight="500.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="517.0" layoutY="248.0" text="Move Up">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="288.0" text="Move Down">
+      <Label alignment="CENTER_RIGHT" layoutX="517.0" layoutY="288.0" text="Move Down">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="328.0" text="Move Right">
+      <Label alignment="CENTER_RIGHT" layoutX="517.0" layoutY="328.0" text="Move Right">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="520.0" layoutY="368.0" text="Move Left">
+      <Label alignment="CENTER_RIGHT" layoutX="517.0" layoutY="368.0" text="Move Left">
          <font>
             <Font size="20.0" />
          </font>
@@ -76,7 +76,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="429.0" layoutY="588.0" text="All Characters Must Be in Small Letters">
+      <Label layoutX="426.0" layoutY="588.0" text="All Characters Must Be in Small Letters">
          <font>
             <Font size="25.0" />
          </font>
