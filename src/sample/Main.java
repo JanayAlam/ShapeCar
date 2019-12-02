@@ -357,8 +357,7 @@ public class Main extends Application {
         controller.labelUser(this.user);
         controller.labelScore(this.s);
         Scene gameOver=new Scene(root, 600, 350);
-        Stage stage=new Stage();
-        stage.setScene(gameOver);
-        stage.show();
+        window.setScene(gameOver);
+        window.show();
     }
 }
