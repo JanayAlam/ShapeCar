@@ -1,8 +1,10 @@
 # CarShape
 A simple 2D game. [Under development]
 
-College group project.
+A university group project.
 
 JDK version: 13.0.1 
 
-JavaFX version: 13 
+JavaFX version: 13 with custom scene builder containers
+
+Icons credit: https://www.flaticon.com/
