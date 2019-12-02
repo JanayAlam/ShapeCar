@@ -3,8 +3,8 @@ package sample;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
-class RoadLens extends Rectangle {
-     RoadLens(){
+class RoadLanes extends Rectangle {
+     RoadLanes(){
         super(18,200,Paint.valueOf("#BF9117"));
     }
     public void placementY() {

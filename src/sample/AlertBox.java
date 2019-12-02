@@ -21,7 +21,7 @@ public class AlertBox {
         popup.setTitle("Credits");
 
         Label message=new Label();
-        message.setText("Devolopers:\nRafsan Bari Shafin & Md Janay Alam");
+        message.setText("DEVELOPER:\nRafsan Bari Shafin & Md Janay Alam\nICONS:\nwww.flaticon.com");
         message.setScaleX(1.25);
         message.setScaleY(1.25);
         Button buttonClose=new Button("Close");
@@ -37,10 +37,8 @@ public class AlertBox {
 
         Scene scene=new Scene(layout, 450, 150);
         popup.setScene(scene);
-        popup.setMinWidth(450);
-        popup.setMaxWidth(450);
-        popup.setMinHeight(150);
-        popup.setMaxHeight(150);
+        popup.setHeight(200);
+        popup.setWidth(550);
         popup.showAndWait();
     }
 

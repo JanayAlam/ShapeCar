@@ -11,17 +11,17 @@
       <JFXButton fx:id="buttonMainMenu" buttonType="RAISED" layoutY="300.0" onAction="#back" prefHeight="50.0" prefWidth="300.0" ripplerFill="#135ca4" text="Main Menu" />
       <JFXButton fx:id="buttonExit" buttonType="RAISED" layoutX="300.0" layoutY="300.0" onAction="#exit" prefHeight="50.0" prefWidth="300.0" ripplerFill="#a31714" text="Exit to Desktop" />
       <Separator layoutX="4.0" layoutY="299.0" prefWidth="600.0" />
-      <Label layoutX="239.0" layoutY="154.0" text="Score:">
+      <Label layoutX="199.0" layoutY="140.0" text="Score:">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="labelScore" layoutX="309.0" layoutY="154.0" text="1029">
+      <Label fx:id="labelScore" layoutX="269.0" layoutY="140.0" text="1029">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="lebelUser" layoutX="269.0" layoutY="200.0" text="Player">
+      <Label fx:id="labelUser" layoutX="199.0" layoutY="183.0" text="Player Name: User">
          <font>
             <Font name="Arial" size="24.0" />
          </font>

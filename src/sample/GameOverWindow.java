@@ -32,4 +32,12 @@ public class GameOverWindow {
     public void exit(){
         System.exit(0);
     }
+
+    void labelUser(String name){
+        this.labelUser.setText("Player Name: "+name);
+    }
+
+    void labelScore(int s){
+        this.labelScore.setText(String.valueOf(s));
+    }
 }

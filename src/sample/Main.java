@@ -2,30 +2,24 @@ package sample;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class Main extends Application {
     private Stage window;
     String user;
+    int s=0;
 
 
     @Override
@@ -46,8 +40,12 @@ public class Main extends Application {
         Scene menu=new Scene(root, 1280, 720);
         MenuController controller=loader.getController();
         controller.setMain(this);
-        controller.labelWelcome(name);
-        this.user=name;
+        if(name.equals("")){
+            this.user="User";
+        }else{
+            this.user=name;
+        }
+        controller.labelWelcome(this.user);
 
         window.setScene(menu);
         window.setOnCloseRequest( e -> {
@@ -76,10 +74,8 @@ public class Main extends Application {
         AlertBox.Credits();
     }
 
-    double s=0;
-
     public void showNewGame() throws Exception{
-        RoadLens[] l=new RoadLens[9];
+        RoadLanes[] l=new RoadLanes[9];
         AnchorPane root=new AnchorPane();
 
         //Vbox
@@ -124,6 +120,12 @@ public class Main extends Application {
         e4.setX(798);
         e4.setY(-1000);
 
+        //Labels
+        Label labelScoreName=new Label("Score");
+        labelScoreName.setFont(new Font("Arial", 20));
+        Label score=new Label(String.valueOf(s));
+        score.setFont(new Font("Arial", 60));
+
 
         new AnimationTimer() {
 
@@ -131,6 +133,10 @@ public class Main extends Application {
             public void handle(long now) {
                 //Controls
                 e1.placementY();
+                if(e1.getY()>=720 && e1.getY()<=722){
+                    s+=1;
+                    score.setText(String.valueOf(s));
+                }
                 if(car.getX()<e1.getX()+e1.getWidth() && car.getY()<e1.getY()+e1.getHeight() && car.getY()+car.getHeight()>e1.getY() && car.getX()+car.getWidth()>e1.getX()){
                     try{
                         gameOver();
@@ -139,8 +145,11 @@ public class Main extends Application {
                     }
                     stop();
                 }
-
                 e2.placementY();
+                if(e2.getY()>=720 && e2.getY()<=722){
+                    s+=1;
+                    score.setText(String.valueOf(s));
+                }
                 if(car.getX()<e2.getX()+e2.getWidth() && car.getY()<e2.getY()+e2.getHeight() && car.getY()+car.getHeight()>e2.getY() && car.getX()+car.getWidth()>e2.getX()){
                     try{
                         gameOver();
@@ -151,6 +160,10 @@ public class Main extends Application {
                 }
 
                 e3.placementY();
+                if(e3.getY()>=720 && e3.getY()<=722){
+                    s+=1;
+                    score.setText(String.valueOf(s));
+                }
                 if(car.getX()<e3.getX()+e3.getWidth() && car.getY()<e3.getY()+e3.getHeight() && car.getY()+car.getHeight()>e3.getY() && car.getX()+car.getWidth()>e3.getX()){
                     try{
                         gameOver();
@@ -161,6 +174,10 @@ public class Main extends Application {
                 }
 
                 e4.placementY();
+                if(e4.getY()>=720 && e4.getY()<=722){
+                    s+=1;
+                    score.setText(String.valueOf(s));
+                }
                 if(car.getX()<e4.getX()+e4.getWidth() && car.getY()<e4.getY()+e4.getHeight() && car.getY()+car.getHeight()>e4.getY() && car.getX()+car.getWidth()>e4.getX()){
                     try{
                         gameOver();
@@ -217,13 +234,6 @@ public class Main extends Application {
             }
         }.start();
 
-        //Labels
-        Label labelScoreName=new Label("Score");
-        labelScoreName.setFont(new Font("Arial", 20));
-        Label score=new Label(String.valueOf(s));
-        score.setFont(new Font("Arial", 60));
-
-
         //VBox
         sideNote.getChildren().addAll(labelScoreName,score,buttonBackToMain);
 
@@ -238,7 +248,7 @@ public class Main extends Application {
 
         //Road Lens
         for(int i=0;i<l.length;i++){
-            l[i]=new RoadLens();
+            l[i]=new RoadLanes();
         }
         setScale(l);
 
@@ -295,7 +305,7 @@ public class Main extends Application {
         launch(args);
     }
 
-    public void setScale(RoadLens[] l){
+    public void setScale(RoadLanes[] l){
         //Set Axis Y
         l[0].setY(350);
         l[1].setY(-40);
@@ -324,6 +334,8 @@ public class Main extends Application {
         Parent root= loader.load();
         GameOverWindow controller=loader.getController();
         controller.setMain(this);
+        controller.labelUser(this.user);
+        controller.labelScore(this.s);
         Scene gameOver=new Scene(root, 600, 350);
         Stage stage=new Stage();
         stage.setScene(gameOver);
