@@ -6,22 +6,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameOverWindow">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameOverWindow">
    <children>
-      <JFXButton fx:id="buttonMainMenu" buttonType="RAISED" layoutY="300.0" onAction="#back" prefHeight="50.0" prefWidth="300.0" ripplerFill="#135ca4" text="Main Menu" />
-      <JFXButton fx:id="buttonExit" buttonType="RAISED" layoutX="300.0" layoutY="300.0" onAction="#exit" prefHeight="50.0" prefWidth="300.0" ripplerFill="#a31714" text="Exit to Desktop" />
-      <Separator layoutY="299.0" prefWidth="600.0" />
-      <Label layoutX="199.0" layoutY="140.0" text="Score:">
+      <JFXButton fx:id="buttonMainMenu" buttonType="RAISED" layoutX="340.0" layoutY="646.0" onAction="#back" prefHeight="50.0" prefWidth="300.0" ripplerFill="#135ca4" text="Main Menu" />
+      <JFXButton fx:id="buttonExit" buttonType="RAISED" layoutX="640.0" layoutY="646.0" onAction="#exit" prefHeight="50.0" prefWidth="300.0" ripplerFill="#a31714" text="Exit to Desktop" />
+      <Separator layoutX="340.0" layoutY="373.0" prefWidth="600.0" />
+      <Label layoutX="539.0" layoutY="297.0" text="Score:">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="labelScore" layoutX="269.0" layoutY="140.0" text="1029">
+      <Label fx:id="labelScore" layoutX="609.0" layoutY="297.0" text="1029">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="labelUser" layoutX="199.0" layoutY="183.0" text="Player Name: User">
+      <Label fx:id="labelUser" layoutX="539.0" layoutY="340.0" text="Player Name: User">
          <font>
             <Font name="Arial" size="24.0" />
          </font>

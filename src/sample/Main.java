@@ -4,6 +4,7 @@ import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -99,6 +100,7 @@ public class Main extends Application {
         //ButtonBack
         Button buttonBackToMain=new Button("Main Menu");
         buttonBackToMain.setPrefSize(250,45);
+        buttonBackToMain.setAlignment(Pos.BASELINE_CENTER);
         buttonBackToMain.setOnAction(e -> {
             try{
                 status=true;
@@ -106,6 +108,13 @@ public class Main extends Application {
             }catch (Exception i) {
                 i.printStackTrace();
             }
+        });
+
+        Button buttonBackToDesktop=new Button("EXIT");
+        buttonBackToDesktop.setPrefSize(250,45);
+        buttonBackToDesktop.setAlignment(Pos.BASELINE_CENTER);
+        buttonBackToDesktop.setOnAction(e -> {
+            System.exit(0);
         });
 
         //Car Create
@@ -290,7 +299,7 @@ public class Main extends Application {
         }.start();
 
         //VBox
-        sideNote.getChildren().addAll(labelScoreName,score,buttonBackToMain);
+        sideNote.getChildren().addAll(labelScoreName,score,buttonBackToMain,buttonBackToDesktop);
 
         //Side lines
         SideLine leftLine=new SideLine();
@@ -351,7 +360,7 @@ public class Main extends Application {
         window.show();
     }
 
-    public void showControl() throws Exception{
+    void showControl() throws Exception{
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("Controls.fxml"));
         Parent root= loader.load();
@@ -366,7 +375,7 @@ public class Main extends Application {
         window.show();
     }
 
-    public void showNewKey() throws Exception{
+    void showNewKey() throws Exception{
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("NewKeys.fxml"));
         Parent root= loader.load();
@@ -416,7 +425,7 @@ public class Main extends Application {
         controller.setMain(this);
         controller.labelUser(this.user);
         controller.labelScore(this.s);
-        Scene gameOver=new Scene(root, 600, 350);
+        Scene gameOver=new Scene(root, 1280, 720);
         window.setScene(gameOver);
         window.show();
     }
