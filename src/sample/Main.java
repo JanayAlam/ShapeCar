@@ -132,7 +132,7 @@ public class Main extends Application {
         //ButtonBack
         Button buttonBackToMain=new Button("Main Menu");
         buttonBackToMain.setPrefSize(250,45);
-        buttonBackToMain.setAlignment(Pos.BASELINE_CENTER);
+        buttonBackToMain.setAlignment(Pos.CENTER);
         buttonBackToMain.setOnAction(e -> {
             try{
                 status=true;
@@ -144,7 +144,7 @@ public class Main extends Application {
 
         Button buttonBackToDesktop=new Button("EXIT");
         buttonBackToDesktop.setPrefSize(250,45);
-        buttonBackToDesktop.setAlignment(Pos.BASELINE_CENTER);
+        buttonBackToDesktop.setAlignment(Pos.CENTER);
         buttonBackToDesktop.setOnAction(e -> {
             System.exit(0);
         });
@@ -399,6 +399,10 @@ public class Main extends Application {
         Scene control=new Scene(root, 1280, 720);
         ControlsController controller=loader.getController();
         controller.setMain(this);
+        controller.setLabelUp();
+        controller.setLabelDown();
+        controller.setLabelRight();
+        controller.setLabelLeft();
         window.setScene(control);
         window.setOnCloseRequest( e -> {
             e.consume();

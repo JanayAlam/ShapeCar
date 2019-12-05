@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControlsColtroller">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControlsController">
    <children>
       <JFXButton fx:id="buttonNewKeys" alignment="CENTER" buttonType="RAISED" contentDisplay="RIGHT" layoutX="650.0" layoutY="660.0" onAction="#newKey" prefHeight="45.0" prefWidth="200.0" ripplerFill="#ae2222" text="CHANGE KEYS">
          <font>
@@ -56,29 +56,24 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="660.0" layoutY="248.0" text="W">
+      <Label fx:id="labelUp" alignment="CENTER_RIGHT" layoutX="660.0" layoutY="248.0" text="W">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="660.0" layoutY="288.0" text="S">
+      <Label fx:id="labelDown" alignment="CENTER_RIGHT" layoutX="660.0" layoutY="288.0" text="S">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="660.0" layoutY="328.0" text="D">
+      <Label fx:id="labelRight" alignment="CENTER_RIGHT" layoutX="660.0" layoutY="328.0" text="D">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER_RIGHT" layoutX="660.0" layoutY="368.0" text="A">
+      <Label fx:id="labelLeft" alignment="CENTER_RIGHT" layoutX="660.0" layoutY="368.0" text="A">
          <font>
             <Font name="System Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="426.0" layoutY="588.0" text="All Characters Must Be in Small Letters">
-         <font>
-            <Font size="25.0" />
          </font>
       </Label>
    </children>
