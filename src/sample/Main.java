@@ -415,6 +415,10 @@ public class Main extends Application {
         Scene KeysControl=new Scene(root, 1280, 720);
         NewKeysController controller=loader.getController();
         controller.setMain(this);
+        controller.fieldUp.setPromptText(this.upKey);
+        controller.fieldDown.setPromptText(this.downKey);
+        controller.fieldRight.setPromptText(this.rightKey);
+        controller.fieldLeft.setPromptText(this.leftKey);
         window.setScene(KeysControl);
         window.setOnCloseRequest( e -> {
             e.consume();

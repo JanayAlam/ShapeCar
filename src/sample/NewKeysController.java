@@ -2,6 +2,7 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 public class NewKeysController {
     Main main;
@@ -9,6 +10,22 @@ public class NewKeysController {
     Button backMainMenu;
     @FXML
     Button buttonBack;
+    @FXML
+    TextField fieldUp;
+    @FXML
+    TextField fieldDown;
+    @FXML
+    TextField fieldRight;
+    @FXML
+    TextField fieldLeft;
+    @FXML
+    Button saveUp;
+    @FXML
+    Button saveDown;
+    @FXML
+    Button saveRight;
+    @FXML
+    Button saveLeft;
 
     public void setMain(Main main){
         this.main=main;
@@ -31,4 +48,34 @@ public class NewKeysController {
             i.printStackTrace();
         }
     }
+
+    @FXML
+    public void reset(){
+        main.upKey="w";
+        main.downKey="s";
+        main.rightKey="d";
+        main.leftKey="a";
+        fieldUp.setPromptText("w");
+        fieldDown.setPromptText("s");
+        fieldRight.setPromptText("d");
+        fieldLeft.setPromptText("a");
+    }
+
+    @FXML
+    public void saveUpKey(){
+        main.setUpKey(fieldUp.getText());
+    }
+    @FXML
+    public void saveDownKey(){
+        main.setDownKey(fieldDown.getText());
+    }
+    @FXML
+    public void saveRightKey(){
+        main.setRightKey(fieldRight.getText());
+    }
+    @FXML
+    public void saveLeftKey(){
+        main.setLeftKey(fieldLeft.getText());
+    }
+
 }

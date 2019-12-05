@@ -41,7 +41,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="503.0" layoutY="216.0">
+      <TextField fx:id="fieldUp" layoutX="503.0" layoutY="216.0">
          <font>
             <Font size="20.0" />
          </font>
@@ -51,7 +51,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="503.0" layoutY="275.0">
+      <TextField fx:id="fieldDown" layoutX="503.0" layoutY="275.0">
          <font>
             <Font size="20.0" />
          </font>
@@ -61,7 +61,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="503.0" layoutY="338.0">
+      <TextField fx:id="fieldRight" layoutX="503.0" layoutY="338.0">
          <font>
             <Font size="20.0" />
          </font>
@@ -71,7 +71,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="501.0" layoutY="400.0">
+      <TextField fx:id="fieldLeft" layoutX="501.0" layoutY="400.0">
          <font>
             <Font size="20.0" />
          </font>
@@ -81,22 +81,34 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <JFXButton layoutX="761.0" layoutY="216.0" prefHeight="45.0" prefWidth="160.0" ripplerFill="#186497" text="SAVE">
+      <JFXButton fx:id="saveUp" layoutX="761.0" layoutY="216.0" onAction="#saveUpKey" prefHeight="45.0" prefWidth="160.0" ripplerFill="#186497" text="SAVE">
          <font>
             <Font size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="761.0" layoutY="275.0" prefHeight="45.0" prefWidth="160.0" ripplerFill="#186497" text="SAVE">
+      <JFXButton fx:id="saveDown" layoutX="761.0" layoutY="275.0" onAction="#saveDownKey" prefHeight="45.0" prefWidth="160.0" ripplerFill="#186497" text="SAVE">
          <font>
             <Font size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="761.0" layoutY="338.0" prefHeight="45.0" prefWidth="160.0" ripplerFill="#186497" text="SAVE">
+      <JFXButton fx:id="saveRight" layoutX="761.0" layoutY="338.0" onAction="#saveRightKey" prefHeight="45.0" prefWidth="160.0" ripplerFill="#186497" text="SAVE">
          <font>
             <Font size="20.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="761.0" layoutY="400.0" prefHeight="45.0" prefWidth="160.0" ripplerFill="#186497" text="SAVE">
+      <JFXButton fx:id="saveLeft" layoutX="761.0" layoutY="400.0" onAction="#saveLeftKey" prefHeight="45.0" prefWidth="160.0" ripplerFill="#186497" text="SAVE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="buttonReset" layoutX="577.0" layoutY="472.0" onAction="#reset" ripplerFill="#9a1111" text="Reset">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/Reset.png" />
+               </image>
+            </ImageView>
+         </graphic>
          <font>
             <Font size="20.0" />
          </font>
