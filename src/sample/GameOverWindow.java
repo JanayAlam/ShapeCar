@@ -7,13 +7,15 @@ import javafx.scene.control.Label;
 public class GameOverWindow {
     Main main;
     @FXML
-    Label labelScore;
+    private Label labelScore;
     @FXML
-    Label labelUser;
+    private Label labelUser;
     @FXML
-    Button buttonMainMenu;
+    private Button buttonMainMenu;
     @FXML
-    Button buttonExit;
+    private Button buttonExit;
+    @FXML
+    private Button buttonReplay;
 
     public void setMain(Main main){
         this.main=main;
@@ -39,5 +41,14 @@ public class GameOverWindow {
 
     void labelScore(int s){
         this.labelScore.setText(String.valueOf(s));
+    }
+
+    @FXML
+    public void rePlay(){
+        try {
+            main.showNewGame();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

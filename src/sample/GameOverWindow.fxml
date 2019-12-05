@@ -11,20 +11,25 @@
       <JFXButton fx:id="buttonMainMenu" buttonType="RAISED" layoutX="340.0" layoutY="646.0" onAction="#back" prefHeight="50.0" prefWidth="300.0" ripplerFill="#135ca4" text="Main Menu" />
       <JFXButton fx:id="buttonExit" buttonType="RAISED" layoutX="640.0" layoutY="646.0" onAction="#exit" prefHeight="50.0" prefWidth="300.0" ripplerFill="#a31714" text="Exit to Desktop" />
       <Separator layoutX="340.0" layoutY="373.0" prefWidth="600.0" />
-      <Label layoutX="539.0" layoutY="297.0" text="Score:">
+      <Label layoutX="539.0" layoutY="291.0" text="Score:">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="labelScore" layoutX="609.0" layoutY="297.0" text="1029">
+      <Label fx:id="labelScore" layoutX="609.0" layoutY="291.0" text="0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="labelUser" layoutX="539.0" layoutY="340.0" text="Player Name: User">
+      <Label fx:id="labelUser" layoutX="539.0" layoutY="334.0" text="Player Name: User">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
       </Label>
+      <JFXButton fx:id="buttonReplay" layoutX="341.0" layoutY="386.0" onAction="#rePlay" prefHeight="45.0" prefWidth="600.0" ripplerFill="#134f87" text="Play Again">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

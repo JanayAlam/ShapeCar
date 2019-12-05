@@ -27,33 +27,17 @@ public class Enemy extends Rectangle {
             }
             n += 0.00005;
         }
+
         if(getX()==90.75 && getY()>950){
             setX(558.5);
         }else if(getX()==321.25 && getY()>950){
             setX(798);
         }else if(getX()==558.5 && getY()>950){
-            setX(90.75);
+                setX(90.75);
         }else if(getX()==798 && getY()>950){
             setX(321.25);
         }
 
-        /*int max = 4;
-        int min = 1;
-        int range = max - min + 1;
-        for (int i = 0; i < 10; i++) {
-            int rand = (int) (Math.random() * range) + min;
-            if(getY()>1000){
-                if (rand == 1) {
-                    setX(321.25);
-                } else if (rand == 2) {
-                    setX(798);
-                } else if (rand == 3) {
-                    setX(90.75);
-                } else if (rand == 4) {
-                    setX(558.5);
-                }
-            }
-        }*/
     }
 
 }
