@@ -21,12 +21,45 @@ public class Main extends Application {
     private Stage window;
     String user;
     int s=0;
-    String up="w";
-    String down="s";
-    String left="a";
-    String right="d";
+    String upKey="w";
+    String downKey="s";
+    String leftKey="a";
+    String rightKey="d";
     boolean status=false;
 
+    //Setter
+    public void setUpKey(String up) {
+        this.upKey = up;
+    }
+
+    public void setDownKey(String down) {
+        this.downKey = down;
+    }
+
+    public void setLeftKey(String left) {
+        this.leftKey = left;
+    }
+
+    public void setRightKey(String right) {
+        this.rightKey = right;
+    }
+
+    //Getter
+    public String getUpKey() {
+        return upKey;
+    }
+
+    public String getDownKey() {
+        return downKey;
+    }
+
+    public String getLeftKey() {
+        return leftKey;
+    }
+
+    public String getRightKey() {
+        return rightKey;
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -329,25 +362,25 @@ public class Main extends Application {
 
         //Controls
         scene.setOnKeyTyped(e->{
-            if(e.getCharacter().equals(this.up)){
+            if(e.getCharacter().equals(this.upKey)){
                 if(car.getY()-25<=25){
                     car.setY(25);
                 }else{
                     car.setY(car.getY()-25);
                 }
-            }else if(e.getCharacter().equals(this.down)){
+            }else if(e.getCharacter().equals(this.downKey)){
                 if(car.getY()+25>=600){
                     car.setY(600);
                 }else{
                     car.setY(car.getY()+25);
                 }
-            }else if(e.getCharacter().equals(this.left)){
+            }else if(e.getCharacter().equals(this.leftKey)){
                 if(car.getX()-25<=35){
                     car.setX(35);
                 }else{
                     car.setX(car.getX()-25);
                 }
-            }else if(e.getCharacter().equals(this.right)){
+            }else if(e.getCharacter().equals(this.rightKey)){
                 if(car.getX()+25>=890){
                     car.setX(890);
                 }else{
