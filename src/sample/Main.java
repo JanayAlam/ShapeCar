@@ -146,7 +146,7 @@ public class Main extends Application {
         buttonBackToDesktop.setPrefSize(250,45);
         buttonBackToDesktop.setAlignment(Pos.CENTER);
         buttonBackToDesktop.setOnAction(e -> {
-            System.exit(0);
+            AlertBox.confirmBox();
         });
 
         //Car Create
