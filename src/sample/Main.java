@@ -24,7 +24,7 @@ public class Main extends Application {
     String downKey="s";
     String leftKey="a";
     String rightKey="d";
-    boolean status=false;
+    private boolean status=false;
 
     //Setter
     public void setUpKey(String up) {
