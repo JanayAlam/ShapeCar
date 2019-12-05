@@ -32,7 +32,7 @@ public class GameOverWindow {
 
     @FXML
     public void exit(){
-        System.exit(0);
+        AlertBox.confirmBox();
     }
 
     void labelUser(String name){
