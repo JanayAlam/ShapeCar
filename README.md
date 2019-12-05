@@ -5,6 +5,6 @@ A university group project.
 
 JDK version: 13.0.1 
 
-JavaFX version: 13 with custom scene builder containers
+JavaFX version: 13 with custom scene builder containers [jfoenix-9.0.8]
 
 Icons credit: https://www.flaticon.com/
