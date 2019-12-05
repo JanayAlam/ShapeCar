@@ -17,7 +17,7 @@ public class GameOverWindow {
     @FXML
     private Button buttonReplay;
 
-    public void setMain(Main main){
+    void setMain(Main main){
         this.main=main;
     }
 
