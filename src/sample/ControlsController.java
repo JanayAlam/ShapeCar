@@ -3,7 +3,7 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-public class ControlsColtroller {
+public class ControlsController {
     Main main;
     @FXML
     private Button buttonBack;
