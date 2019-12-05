@@ -5,13 +5,13 @@ import javafx.scene.shape.Rectangle;
 
 class RoadLanes extends Rectangle {
      RoadLanes(){
-        super(18,200,Paint.valueOf("#BF9117"));
+        super(18,150,Paint.valueOf("#BF9117"));
     }
     public void placementY() {
-         if(getY()>=720+150){
-             setY(-270);
+         if(getY()>=720+100){
+             setY(-250);
          }else{
-             setY(getY()+0.3);
+             setY(getY()+0.5);
          }
     }
 }

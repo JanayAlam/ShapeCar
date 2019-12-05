@@ -199,46 +199,91 @@ public class Main extends Application {
                     //RoadLens
                     l[0].placementY();
                     if(car.getX()<l[0].getX()+l[0].getWidth() && car.getY()<l[0].getY()+l[0].getHeight() && car.getY()+car.getHeight()>l[0].getY() && car.getX()+car.getWidth()>l[0].getX()){
-                        System.out.println("C");
+                        try{
+                            gameOver();
+                        }catch (Exception i) {
+                            i.printStackTrace();
+                        }
+                        stop();
                     }
 
                     l[1].placementY();
                     if(car.getX()<l[1].getX()+l[1].getWidth() && car.getY()<l[1].getY()+l[1].getHeight() && car.getY()+car.getHeight()>l[1].getY() && car.getX()+car.getWidth()>l[1].getX()){
-                        System.out.println("C");
+                        try{
+                            gameOver();
+                        }catch (Exception i) {
+                            i.printStackTrace();
+                        }
+                        stop();
                     }
 
                     l[2].placementY();
                     if(car.getX()<l[2].getX()+l[2].getWidth() && car.getY()<l[2].getY()+l[2].getHeight() && car.getY()+car.getHeight()>l[2].getY() && car.getX()+car.getWidth()>l[2].getX()){
-                        System.out.println("C");
+                        try{
+                            gameOver();
+                        }catch (Exception i) {
+                            i.printStackTrace();
+                        }
+                        stop();
                     }
 
                     l[3].placementY();
                     if(car.getX()<l[3].getX()+l[3].getWidth() && car.getY()<l[3].getY()+l[3].getHeight() && car.getY()+car.getHeight()>l[3].getY() && car.getX()+car.getWidth()>l[3].getX()){
-                        System.out.println("C");
+                        try{
+                            gameOver();
+                        }catch (Exception i) {
+                            i.printStackTrace();
+                        }
+                        stop();
                     }
 
                     l[4].placementY();
                     if(car.getX()<l[4].getX()+l[4].getWidth() && car.getY()<l[4].getY()+l[4].getHeight() && car.getY()+car.getHeight()>l[4].getY() && car.getX()+car.getWidth()>l[4].getX()){
-                        System.out.println("C");
+                        try{
+                            gameOver();
+                        }catch (Exception i) {
+                            i.printStackTrace();
+                        }
+                        stop();
                     }
 
                     l[5].placementY();
                     if(car.getX()<l[5].getX()+l[5].getWidth() && car.getY()<l[5].getY()+l[5].getHeight() && car.getY()+car.getHeight()>l[5].getY() && car.getX()+car.getWidth()>l[5].getX()){
-                        System.out.println("C");
+                        try{
+                            gameOver();
+                        }catch (Exception i) {
+                            i.printStackTrace();
+                        }
+                        stop();
                     }
 
                     l[6].placementY();
                     if(car.getX()<l[6].getX()+l[6].getWidth() && car.getY()<l[6].getY()+l[6].getHeight() && car.getY()+car.getHeight()>l[6].getY() && car.getX()+car.getWidth()>l[6].getX()){
-                        System.out.println("C");
+                        try{
+                            gameOver();
+                        }catch (Exception i) {
+                            i.printStackTrace();
+                        }
+                        stop();
                     }
                     l[7].placementY();
                     if(car.getX()<l[7].getX()+l[7].getWidth() && car.getY()<l[7].getY()+l[7].getHeight() && car.getY()+car.getHeight()>l[7].getY() && car.getX()+car.getWidth()>l[7].getX()){
-                        System.out.println("C");
+                        try{
+                            gameOver();
+                        }catch (Exception i) {
+                            i.printStackTrace();
+                        }
+                        stop();
                     }
 
                     l[8].placementY();
                     if(car.getX()<l[8].getX()+l[8].getWidth() && car.getY()<l[8].getY()+l[8].getHeight() && car.getY()+car.getHeight()>l[8].getY() && car.getX()+car.getWidth()>l[8].getX()){
-                        System.out.println("C");
+                        try{
+                            gameOver();
+                        }catch (Exception i) {
+                            i.printStackTrace();
+                        }
+                        stop();
                     }
                 }
             }
@@ -342,15 +387,15 @@ public class Main extends Application {
 
     public void setScale(RoadLanes[] l){
         //Set Axis Y
-        l[0].setY(350);
-        l[1].setY(-40);
-        l[2].setY(-450);
-        l[3].setY(500);
-        l[4].setY(110);
-        l[5].setY(-300);
-        l[6].setY(350);
-        l[7].setY(-40);
-        l[8].setY(-450);
+        l[0].setY(720-150);
+        l[1].setY(l[0].getY()-150-200);
+        l[2].setY(l[1].getY()-150-200);
+        l[3].setY(720-300);
+        l[4].setY(l[3].getY()-150-200);
+        l[5].setY(l[4].getY()-150-200);
+        l[6].setY(720-150);
+        l[7].setY(l[6].getY()-150-200);
+        l[8].setY(l[7].getY()-150-200);
         //Set Axis X
         for(int i=0;i<l.length;i++){
             if(i==0 || i==1 || i==2){
