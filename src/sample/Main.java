@@ -16,6 +16,8 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.io.*;
+
 public class Main extends Application {
     private Stage window;
     String user;
@@ -25,6 +27,9 @@ public class Main extends Application {
     private String leftKey="a";
     private String rightKey="d";
     private boolean status=false;
+
+    public Main() throws IOException {
+    }
 
     //Setter
     public void setUpKey(String up) {
@@ -457,6 +462,7 @@ public class Main extends Application {
         }
     }
 
+
     void gameOver() throws Exception{
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("GameOverWindow.fxml"));
@@ -465,6 +471,25 @@ public class Main extends Application {
         controller.setMain(this);
         controller.labelUser(this.user);
         controller.labelScore(this.s);
+
+        File read=new File("Text/HighestScore.txt");
+        File write=new File("Text/BestPlayer.txt");
+        File writeScore=new File("Text/HighestScore.txt");
+        Reader r=new FileReader(read);
+        Writer w1=new FileWriter(write);
+        Writer w2=new FileWriter(writeScore);
+        char[] data=new char[(int)read.length()];
+        r.read(data);
+        int score=Integer.valueOf(r.read(data));
+        r.close();
+
+        if(this.s>score){
+            w1.write(user);
+            w2.write(String.valueOf(s));
+            w1.close();
+            w2.close();
+        }
+
         Scene gameOver=new Scene(root, 1280, 720);
         window.setScene(gameOver);
         window.show();
