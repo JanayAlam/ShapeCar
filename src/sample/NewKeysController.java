@@ -51,10 +51,10 @@ public class NewKeysController {
 
     @FXML
     public void reset(){
-        main.upKey="w";
-        main.downKey="s";
-        main.rightKey="d";
-        main.leftKey="a";
+        main.setUpKey("w");
+        main.setDownKey("s");
+        main.setRightKey("d");
+        main.setLeftKey("a");
         fieldUp.setPromptText("w");
         fieldDown.setPromptText("s");
         fieldRight.setPromptText("d");

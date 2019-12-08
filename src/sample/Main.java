@@ -20,10 +20,10 @@ public class Main extends Application {
     private Stage window;
     String user;
     int s=0;
-    String upKey="w";
-    String downKey="s";
-    String leftKey="a";
-    String rightKey="d";
+    private String upKey="w";
+    private String downKey="s";
+    private String leftKey="a";
+    private String rightKey="d";
     private boolean status=false;
 
     //Setter

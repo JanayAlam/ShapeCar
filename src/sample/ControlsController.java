@@ -42,15 +42,15 @@ public class ControlsController {
     }
 
     public void setLabelUp(){
-        this.labelUp.setText(main.upKey);
+        this.labelUp.setText(main.getUpKey());
     }
     public void setLabelDown(){
-        this.labelDown.setText(main.downKey);
+        this.labelDown.setText(main.getDownKey());
     }
     public void setLabelRight(){
-        this.labelRight.setText(main.rightKey);
+        this.labelRight.setText(main.getRightKey());
     }
     public void setLabelLeft(){
-        this.labelLeft.setText(main.leftKey);
+        this.labelLeft.setText(main.getLeftKey());
     }
 }
