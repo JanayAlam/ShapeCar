@@ -26,6 +26,8 @@ public class Main extends Application {
     private String downKey="s";
     private String leftKey="a";
     private String rightKey="d";
+    String name="";
+    private int highestScore;
     private boolean status=false;
 
     public Main() throws IOException {
@@ -472,16 +474,24 @@ public class Main extends Application {
         controller.labelUser(this.user);
         controller.labelScore(this.s);
 
-        File read=new File("Text/HighestScore.txt");
+        /*File read=new File("Text/HighestScore.txt");
         File write=new File("Text/BestPlayer.txt");
         File writeScore=new File("Text/HighestScore.txt");
         Reader r=new FileReader(read);
         Writer w1=new FileWriter(write);
         Writer w2=new FileWriter(writeScore);
-        char[] data=new char[(int)read.length()];
-        r.read(data);
-        int score=Integer.valueOf(r.read(data));
+        BufferedReader br=new BufferedReader(r);
+        int score=0;
+        while(true){
+            String s=br.readLine();
+            System.out.println(s);
+            score=Integer.valueOf(s);
+            if(s==null){
+                break;
+            }
+        }
         r.close();
+
 
         if(this.s>score){
             w1.write(user);
@@ -489,6 +499,9 @@ public class Main extends Application {
             w1.close();
             w2.close();
         }
+
+        controller.sethPlayer();
+        controller.sethScore();*/
 
         Scene gameOver=new Scene(root, 1280, 720);
         window.setScene(gameOver);
