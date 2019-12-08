@@ -5,7 +5,7 @@ import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
 public class Enemy extends Rectangle {
-    double n = 0.00001;
+    private double n = 0.00001;
 
     public Enemy() {
         super(100, 130, Paint.valueOf("#FFFFFF"));
