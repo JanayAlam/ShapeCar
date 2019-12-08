@@ -1,7 +1,7 @@
 # CarShape
 A simple 2D game. [Under development]
 
-A university group project.
+A university group(2) project.
 
 JDK version: 13.0.1 
 
