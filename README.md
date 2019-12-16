@@ -1,5 +1,5 @@
 # ShapeCar
-A simple 2D game. [Under development]
+A simple 2D game.
 
 A university group(2) project.
 
