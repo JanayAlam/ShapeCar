@@ -1,4 +1,4 @@
-# CarShape
+# ShapeCar
 A simple 2D game. [Under development]
 
 A university group(2) project.
